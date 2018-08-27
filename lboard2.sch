@@ -1,0 +1,170 @@
+EESchema Schematic File Version 2
+LIBS:lboard2-rescue
+LIBS:power
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:xilinx-spartan6
+LIBS:btt-mcu
+LIBS:dc-dc
+LIBS:stm32
+LIBS:battery_management
+LIBS:btt-power
+LIBS:m25p16-vme
+LIBS:TexasInstruments
+LIBS:ESD_Protection
+LIBS:ft232rl
+LIBS:btt-mem
+LIBS:btt-iface
+LIBS:lboard2-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 5
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 900  6450 1050 950 
+U 5A6A4B6E
+F0 "Power Supply" 60
+F1 "psu.sch" 60
+$EndSheet
+$Sheet
+S 4050 1300 2500 3525
+U 5B65C8CD
+F0 "FPGA" 60
+F1 "fpga.sch" 60
+F2 "CLK_FPGA" I L 4050 3225 60 
+F3 "CLK_FPGA_AUX" I L 4050 3425 60 
+F4 "CBUS_PROGB" I L 4050 2075 60 
+F5 "CBUS_INITB" O L 4050 2200 60 
+F6 "CBUS_CLOCK" I L 4050 2325 60 
+F7 "CBUS_BUSY" O L 4050 2450 60 
+F8 "CBUS_DONE" O L 4050 2575 60 
+F9 "CBUS_DATA" I L 4050 2700 60 
+F10 "UART1_TX" O L 4050 4275 60 
+F11 "UART1_RX" I L 4050 4400 60 
+F12 "CODEC_RST" O R 6550 3375 60 
+F13 "CODEC_SCL" O R 6550 3250 60 
+F14 "CODEC_SDA" B R 6550 3150 60 
+F15 "CODEC_BCLK" O R 6550 3050 60 
+F16 "CODEC_WCLK" O R 6550 2950 60 
+F17 "CODEC_DIN" O R 6550 2850 60 
+F18 "CODEC_DOUT" I R 6550 2750 60 
+F19 "CODEC_CLKAUX" O R 6550 2650 60 
+$EndSheet
+$Sheet
+S 7600 1300 1600 2525
+U 5B6BC2FC
+F0 "CODEC" 60
+F1 "codec.sch" 60
+F2 "CLK_CODEC" I L 7600 3550 60 
+F3 "CODEC_RST" I L 7600 3375 60 
+F4 "CODEC_CLKAUX" I L 7600 2650 60 
+F5 "CODEC_SCL" I L 7600 3250 60 
+F6 "CODEC_SDA" B L 7600 3150 60 
+F7 "CODEC_DOUT" O L 7600 2750 60 
+F8 "CODEC_DIN" I L 7600 2850 60 
+F9 "CODEC_BCLK" I L 7600 3050 60 
+F10 "CODEC_WCLK" I L 7600 2950 60 
+$EndSheet
+Wire Wire Line
+	2975 3225 4050 3225
+Wire Wire Line
+	2975 4575 3400 4575
+Wire Wire Line
+	3400 4575 3400 5500
+Wire Wire Line
+	3400 5500 7125 5500
+Wire Wire Line
+	7125 5500 7125 3550
+Wire Wire Line
+	7125 3550 7600 3550
+Wire Wire Line
+	4050 3425 2975 3425
+Wire Wire Line
+	2975 2075 4050 2075
+Wire Wire Line
+	2975 2200 4050 2200
+Wire Wire Line
+	2975 2325 4050 2325
+Wire Wire Line
+	2975 2450 4050 2450
+Wire Wire Line
+	2975 2575 4050 2575
+Wire Wire Line
+	2975 2700 4050 2700
+Wire Wire Line
+	2975 4275 4050 4275
+Wire Wire Line
+	2975 4400 4050 4400
+Wire Wire Line
+	6550 2650 7600 2650
+Wire Wire Line
+	6550 2750 7600 2750
+Wire Wire Line
+	6550 2850 7600 2850
+Wire Wire Line
+	6550 2950 7600 2950
+Wire Wire Line
+	6550 3050 7600 3050
+Wire Wire Line
+	6550 3150 7600 3150
+Wire Wire Line
+	6550 3250 7600 3250
+Wire Wire Line
+	6550 3375 7600 3375
+$Sheet
+S 825  1300 2150 3525
+U 5A6A330B
+F0 "MCU" 60
+F1 "mcusch.sch" 60
+F2 "CLK_FPGA" O R 2975 3225 60 
+F3 "CLK_CODEC" O R 2975 4575 60 
+F4 "CLK_FPGA_AUX" O R 2975 3425 60 
+F5 "CBUS_PROGB" O R 2975 2075 60 
+F6 "CBUS_INITB" I R 2975 2200 60 
+F7 "CBUS_CLOCK" O R 2975 2325 60 
+F8 "CBUS_BUSY" I R 2975 2450 60 
+F9 "CBUS_DONE" I R 2975 2575 60 
+F10 "CBUS_DATA" O R 2975 2700 60 
+F11 "UART1_TX" I R 2975 4275 60 
+F12 "UART1_RX" I R 2975 4400 60 
+$EndSheet
+$EndSCHEMATC
