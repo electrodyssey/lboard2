@@ -1560,7 +1560,7 @@ Wire Wire Line
 	3575 10625 3325 10625
 Connection ~ 3325 10625
 Wire Wire Line
-	3325 10250 3700 10250
+	3175 10250 3700 10250
 Connection ~ 3575 10250
 Wire Wire Line
 	4700 9250 5250 9250
@@ -1874,4 +1874,22 @@ Wire Wire Line
 	5550 9350 5950 9350
 Wire Wire Line
 	5950 9450 5550 9450
+$Comp
+L +3V3 #PWR0148
+U 1 1 5BAD111D
+P 3175 10250
+F 0 "#PWR0148" H 3175 10100 50  0001 C CNN
+F 1 "+3V3" H 3175 10390 50  0000 C CNN
+F 2 "" H 3175 10250 50  0001 C CNN
+F 3 "" H 3175 10250 50  0001 C CNN
+	1    3175 10250
+	1    0    0    -1  
+$EndComp
+Connection ~ 3325 10250
+Text Notes 2775 11150 0    60   ~ 0
+corrected in 2.8\n3v3 is now connected to C3
+Wire Notes Line
+	3200 10275 3200 10950
+Wire Notes Line
+	3200 10950 2850 10950
 $EndSCHEMATC
