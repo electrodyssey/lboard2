@@ -50,11 +50,11 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 5 5
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "MCU"
+Date "2018-09-30"
+Rev "2.8.001"
+Comp "(c) elecrodyssey / LGPL"
+Comment1 "MCU"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -187,7 +187,7 @@ L R_Small R7
 U 1 1 5B619B4E
 P 9225 9250
 F 0 "R7" H 9255 9270 50  0000 L CNN
-F 1 "10k" H 9255 9210 50  0000 L CNN
+F 1 "DNP" H 9255 9210 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" H 9225 9250 50  0001 C CNN
 F 3 "" H 9225 9250 50  0001 C CNN
 	1    9225 9250

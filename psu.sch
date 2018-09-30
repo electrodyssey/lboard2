@@ -51,10 +51,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 2 5
 Title "Power Supply"
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Date "2018-09-30"
+Rev "2.8.001"
+Comp "(c) elecrodyssey / LGPL"
+Comment1 "onboard power supply"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -466,7 +466,7 @@ L R R13
 U 1 1 5B615ABC
 P 3825 5175
 F 0 "R13" V 3905 5175 50  0000 C CNN
-F 1 "100" V 3825 5175 50  0000 C CNN
+F 1 "390" V 3825 5175 50  0000 C CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" V 3755 5175 50  0001 C CNN
 F 3 "" H 3825 5175 50  0001 C CNN
 	1    3825 5175
@@ -539,7 +539,7 @@ F 3 "" H 3325 4725 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Notes 4050 5275 1    60   ~ 0
-121?\n
+360?\n
 $Comp
 L +3V3 #PWR021
 U 1 1 5B617EB3

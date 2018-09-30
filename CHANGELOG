@@ -1,5 +1,10 @@
-2.8
+*** 2.8.000
 
 Fixed 3v3 output supply voltage of CDCE913
 
 
+
+*** 2.8.001
+
+Resistor R7 connected to a net SPIFL_NSS (U3 - M25P16) is marked as DNP, because pull-up isn't requred.
+LGPL 3.0 license added to a distribution

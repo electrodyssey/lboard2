@@ -50,11 +50,11 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 4 5
-Title ""
-Date ""
-Rev ""
-Comp ""
-Comment1 ""
+Title "Audio CODEC"
+Date "2018-09-30"
+Rev "2.8.001"
+Comp "(c) elecrodyssey / LGPL"
+Comment1 "audio codec and analog i/o"
 Comment2 ""
 Comment3 ""
 Comment4 ""

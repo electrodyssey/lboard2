@@ -51,10 +51,10 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 5
 Title "FPGA GPIO"
-Date ""
-Rev "3"
-Comp ""
-Comment1 ""
+Date "2018-09-30"
+Rev "2.8.001"
+Comp "(c) elecrodyssey / LGPL"
+Comment1 "lboard2 - simplistic audio processing board"
 Comment2 ""
 Comment3 ""
 Comment4 ""
