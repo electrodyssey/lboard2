@@ -3695,6 +3695,6 @@ Wire Wire Line
 Wire Wire Line
 	1400 7775 1400 7925
 NoConn ~ 3250 2475
-Text Notes 1000 2475 0    60   ~ 0
-CSI_B must be left unconnected,\n otherwise Slave-Serial will fail
+Text Notes 500  3075 0    60   ~ 0
+---------------------x--------x---->\nCSI_B must be \nleft \nunconnected,  \notherwise\nSlave-Serial\nwill fail
 $EndSCHEMATC
