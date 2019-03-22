@@ -310,17 +310,6 @@ TDI
 Text Notes 13225 1900 0    60   ~ 0
 xilinx jtag header
 $Comp
-L GND #PWR046
-U 1 1 5B65D138
-P 2500 2450
-F 0 "#PWR046" H 2500 2200 50  0001 C CNN
-F 1 "GND" H 2500 2300 50  0000 C CNN
-F 2 "" H 2500 2450 50  0000 C CNN
-F 3 "" H 2500 2450 50  0000 C CNN
-	1    2500 2450
-	1    0    0    -1  
-$EndComp
-$Comp
 L GND #PWR047
 U 1 1 5B65D139
 P 2575 3650
@@ -680,8 +669,6 @@ F 3 "" H 2100 4475 50  0000 C CNN
 $EndComp
 Text Label 2750 3675 0    60   ~ 0
 RDWR_B
-Text Label 2675 2475 0    60   ~ 0
-CSI_B
 Text Label 2800 1975 0    60   ~ 0
 CCLCK
 $Comp
@@ -2628,12 +2615,6 @@ Wire Notes Line
 Wire Notes Line
 	13700 1775 13700 825 
 Wire Wire Line
-	2575 2475 2575 2425
-Wire Wire Line
-	2575 2425 2500 2425
-Wire Wire Line
-	2500 2425 2500 2450
-Wire Wire Line
 	2650 3675 2650 3600
 Wire Wire Line
 	2650 3600 2575 3600
@@ -2765,8 +2746,6 @@ Wire Wire Line
 	12825 6500 12825 6675
 Wire Wire Line
 	2450 3175 3250 3175
-Wire Wire Line
-	2575 2475 3250 2475
 Wire Wire Line
 	2650 3675 3250 3675
 Wire Wire Line
@@ -3715,4 +3694,7 @@ Wire Wire Line
 	1400 6425 1400 6575
 Wire Wire Line
 	1400 7775 1400 7925
+NoConn ~ 3250 2475
+Text Notes 1000 2475 0    60   ~ 0
+CSI_B must be left unconnected,\n otherwise Slave-Serial will fail
 $EndSCHEMATC

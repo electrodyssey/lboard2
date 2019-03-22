@@ -52,10 +52,10 @@ encoding utf-8
 Sheet 1 5
 Title "lboard2"
 Date "2018-09-30"
-Rev "2.8.001"
+Rev "2.9.001"
 Comp "(c) elecrodyssey / LGPL"
 Comment1 "lboard2 - simplistic audio processing board"
-Comment2 ""
+Comment2 "Spartan-6 CSI_B must be left unconnected"
 Comment3 ""
 Comment4 ""
 $EndDescr
