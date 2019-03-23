@@ -3,7 +3,7 @@
   (general
     (links 621)
     (no_connects 2)
-    (area 16.835716 30.32 260.024572 157.747001)
+    (area 50.749999 50.749999 254.050001 152.450001)
     (thickness 1.6)
     (drawings 24)
     (tracks 4019)
@@ -14,7 +14,7 @@
 
   (page A4)
   (title_block
-    (rev 2.9.001)
+    (rev 2.9.002)
   )
 
   (layers
@@ -93,7 +93,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory plot/gerber-v2.8/lboard-gerber-v2.8.000/))
+      (outputdirectory plot/gerber-v2.9/lboard-gerber-v2.9.002/))
   )
 
   (net 0 "")
@@ -9482,7 +9482,7 @@
   (gr_text "LINE IN 1" (at 68.961 57.023 90) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
-  (gr_text "lboard v2.9.001\n2019-03-22" (at 61.722 71.501) (layer F.SilkS)
+  (gr_text "lboard v2.9.002\n2019-03-23" (at 61.722 71.501) (layer F.SilkS)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text +boot0 (at 178.816 99.06 90) (layer F.SilkS)

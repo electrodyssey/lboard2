@@ -52,7 +52,7 @@ encoding utf-8
 Sheet 4 5
 Title "Audio CODEC"
 Date "2018-09-30"
-Rev "2.8.001"
+Rev "2.9.002"
 Comp "(c) elecrodyssey / LGPL"
 Comment1 "audio codec and analog i/o"
 Comment2 ""

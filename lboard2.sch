@@ -52,7 +52,7 @@ encoding utf-8
 Sheet 1 5
 Title "lboard2"
 Date "2018-09-30"
-Rev "2.9.001"
+Rev "2.9.002"
 Comp "(c) elecrodyssey / LGPL"
 Comment1 "lboard2 - simplistic audio processing board"
 Comment2 "Spartan-6 CSI_B must be left unconnected"
@@ -87,7 +87,7 @@ F15 "CODEC_BCLK" O R 6550 3050 60
 F16 "CODEC_WCLK" O R 6550 2950 60 
 F17 "CODEC_DIN" O R 6550 2850 60 
 F18 "CODEC_DOUT" I R 6550 2750 60 
-F19 "CODEC_CLKAUX" O R 6550 2650 60 
+F19 "CODEC_CLKAUX" I R 6550 2650 60 
 $EndSheet
 $Sheet
 S 7600 1300 1600 2525
@@ -96,7 +96,7 @@ F0 "CODEC" 60
 F1 "codec.sch" 60
 F2 "CLK_CODEC" I L 7600 3550 60 
 F3 "CODEC_RST" I L 7600 3375 60 
-F4 "CODEC_CLKAUX" I L 7600 2650 60 
+F4 "CODEC_CLKAUX" O L 7600 2650 60 
 F5 "CODEC_SCL" I L 7600 3250 60 
 F6 "CODEC_SDA" B L 7600 3150 60 
 F7 "CODEC_DOUT" O L 7600 2750 60 

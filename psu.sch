@@ -52,7 +52,7 @@ encoding utf-8
 Sheet 2 5
 Title "Power Supply"
 Date "2018-09-30"
-Rev "2.8.001"
+Rev "2.9.002"
 Comp "(c) elecrodyssey / LGPL"
 Comment1 "onboard power supply"
 Comment2 ""

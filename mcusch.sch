@@ -52,7 +52,7 @@ encoding utf-8
 Sheet 5 5
 Title "MCU"
 Date "2018-09-30"
-Rev "2.8.001"
+Rev "2.9.002"
 Comp "(c) elecrodyssey / LGPL"
 Comment1 "MCU"
 Comment2 ""
@@ -723,7 +723,7 @@ L R_Small R6
 U 1 1 5B634E41
 P 3325 9900
 F 0 "R6" V 3400 9850 50  0000 L CNN
-F 1 "10k" V 3250 9800 50  0000 L CNN
+F 1 "10k DNP" V 3250 9800 50  0000 L CNN
 F 2 "Resistors_SMD:R_0805_HandSoldering" H 3325 9900 50  0001 C CNN
 F 3 "" H 3325 9900 50  0001 C CNN
 	1    3325 9900
