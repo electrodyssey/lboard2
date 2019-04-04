@@ -8,3 +8,13 @@ Fixed 3v3 output supply voltage of CDCE913
 
 Resistor R7 connected to a net SPIFL_NSS (U3 - M25P16) is marked as DNP, because pull-up isn't requred.
 LGPL 3.0 license added to a distribution
+
+*** 2.9.001
+2019-03-22 Fix: Spartan-6 CSI_B pin must not be connected to a ground in a Slave-Serial mode! Version bump to 2.9 
+
+*** 2.9.002
+2019-03-23 U1 CDCDE913 Vctrl pin resistor is marked as DNP. Schematics pdf, gerbers and the photo were updated.
+
+*** 2.9.005
+2019-04-04 pull-up resistors for a codec i2c line are added: R49 R50
+
