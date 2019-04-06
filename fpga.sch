@@ -52,7 +52,7 @@ encoding utf-8
 Sheet 3 5
 Title "FPGA GPIO"
 Date "2018-09-30"
-Rev "2.8.001"
+Rev "2.9.006"
 Comp "(c) elecrodyssey / LGPL"
 Comment1 "lboard2 - simplistic audio processing board"
 Comment2 ""
@@ -89,7 +89,7 @@ F 3 "" H 12300 2575 50  0000 C CNN
 	3    12300 2575
 	1    0    0    -1  
 $EndComp
-Text Label 2600 2375 0    60   ~ 0
+Text Label 2100 2375 0    60   ~ 0
 CBUS_DATA
 Entry Wire Line
 	1675 3475 1775 3575
@@ -2209,30 +2209,6 @@ Text HLabel 14725 3800 0    60   Output ~ 0
 CBUS_DONE
 Text HLabel 14675 3900 0    60   Input ~ 0
 CBUS_DATA
-Text Label 10250 10475 0    60   ~ 0
-CBUS_PROGB
-Text Label 10250 10600 0    60   ~ 0
-CBUS_INITB
-Text Label 10250 10725 0    60   ~ 0
-CBUS_CLOCK
-Text Label 10250 10850 0    60   ~ 0
-CBUS_BUSY
-Text Label 10250 10975 0    60   ~ 0
-CBUS_DONE
-Text Label 10250 11100 0    60   ~ 0
-CBUS_DATA
-Text HLabel 10225 10475 0    60   Input ~ 0
-CBUS_PROGB
-Text HLabel 10225 10600 0    60   Output ~ 0
-CBUS_INITB
-Text HLabel 10225 10725 0    60   Input ~ 0
-CBUS_CLOCK
-Text HLabel 10225 10850 0    60   Output ~ 0
-CBUS_BUSY
-Text HLabel 10225 10975 0    60   Output ~ 0
-CBUS_DONE
-Text HLabel 10225 11100 0    60   Input ~ 0
-CBUS_DATA
 Text HLabel 7775 4375 2    60   Output ~ 0
 UART1_TX
 Text HLabel 7775 4475 2    60   Input ~ 0
@@ -3357,7 +3333,7 @@ Wire Wire Line
 Wire Wire Line
 	14725 3800 15300 3800
 Wire Wire Line
-	2525 2375 3250 2375
+	2925 2375 3250 2375
 Wire Wire Line
 	1775 4075 3250 4075
 Wire Wire Line
@@ -3422,16 +3398,16 @@ Wire Wire Line
 	3875 6025 4125 6025
 Connection ~ 4125 6025
 Wire Wire Line
-	3875 6125 4125 6125
+	4125 6125 3875 6125
 Connection ~ 4125 6125
 Wire Wire Line
-	3875 6225 4125 6225
+	4125 6225 3875 6225
 Connection ~ 4125 6225
 Wire Wire Line
-	3875 6325 4125 6325
+	4125 6325 3875 6325
 Connection ~ 4125 6325
 Wire Wire Line
-	3875 6425 4125 6425
+	4125 6425 3875 6425
 Connection ~ 4125 6425
 Wire Wire Line
 	1300 6575 1900 6575
@@ -3533,18 +3509,6 @@ Wire Wire Line
 Connection ~ 2100 10200
 Wire Wire Line
 	3175 4475 3175 5200
-Wire Wire Line
-	10225 10475 10850 10475
-Wire Wire Line
-	10225 10600 10850 10600
-Wire Wire Line
-	10225 10725 10850 10725
-Wire Wire Line
-	10225 10850 10850 10850
-Wire Wire Line
-	10225 10975 10850 10975
-Wire Wire Line
-	10225 11100 10850 11100
 Wire Wire Line
 	3175 5200 2200 5200
 Wire Wire Line
@@ -3697,4 +3661,63 @@ Wire Wire Line
 NoConn ~ 3250 2475
 Text Notes 500  3075 0    60   ~ 0
 ---------------------x--------x---->\nCSI_B must be \nleft \nunconnected,  \notherwise\nSlave-Serial\nwill fail
+$Comp
+L Conn_01x05 J_SPIFLASHF_DBG2
+U 1 1 5CA8EF35
+P 11450 10775
+F 0 "J_SPIFLASHF_DBG2" H 11450 11075 50  0000 C CNN
+F 1 "Conn_01x05" H 11450 10475 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 11450 10775 50  0001 C CNN
+F 3 "" H 11450 10775 50  0001 C CNN
+	1    11450 10775
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR090
+U 1 1 5CA8F058
+P 10900 10375
+F 0 "#PWR090" H 10900 10125 50  0001 C CNN
+F 1 "GND" H 10900 10225 50  0000 C CNN
+F 2 "" H 10900 10375 50  0001 C CNN
+F 3 "" H 10900 10375 50  0001 C CNN
+	1    10900 10375
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10900 10375 10900 10300
+Wire Wire Line
+	10900 10300 11100 10300
+Wire Wire Line
+	11100 10300 11100 10575
+Wire Wire Line
+	11100 10575 11250 10575
+Wire Wire Line
+	11250 10675 9950 10675
+Wire Wire Line
+	11250 10775 9950 10775
+Wire Wire Line
+	11250 10875 9950 10875
+Wire Wire Line
+	11250 10975 9950 10975
+Text Label 10250 10675 0    60   ~ 0
+SPIFL_CS
+Text Label 10250 10775 0    60   ~ 0
+SPIFL_CLK
+Text Label 10250 10875 0    60   ~ 0
+SPIFL_MOSI
+Text Label 10250 10975 0    60   ~ 0
+SPIFL_MISO
+$Comp
+L R R51
+U 1 1 5CA961D4
+P 2775 2375
+F 0 "R51" V 2855 2375 50  0000 C CNN
+F 1 "10" V 2775 2375 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2705 2375 50  0001 C CNN
+F 3 "" H 2775 2375 50  0001 C CNN
+	1    2775 2375
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1425 2375 2625 2375
 $EndSCHEMATC

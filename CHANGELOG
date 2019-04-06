@@ -18,3 +18,6 @@ LGPL 3.0 license added to a distribution
 *** 2.9.005
 2019-04-04 pull-up resistors for a codec i2c line are added: R49 R50
 
+*** 2.9.006
+2019-04-06 added debug headers for spi flash, addedd  R51 - serial termination resistor for a CBUS_DATA line
+
