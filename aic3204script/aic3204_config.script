@@ -1,0 +1,228 @@
+#script fragment programs the power registers for use with the internal LDOs. This script
+#assumes that the LDO_SELECT pin is pulled high and that the LDOin voltage is between 1.9 V and 3.6V.
+#The commands highlighted in blue are necessary for proper operation of the device.
+##################################################
+# Configure Power Supplies
+###############################################
+#
+# Select Page 1
+# w 30 00 01
+#
+# Power up AVDD LDO
+#w 30 02 09
+# <blue>
+# Disable weak AVDD in presence of external
+# AVDD supply
+# w 30 01 08
+#
+# Enable Master Analog Power Control
+# Power up AVDD LDO
+# w 30 02 01
+# </blue>
+#
+# Set full chip common mode to 0.9V
+# HP output CM = 1.65V
+# HP driver supply = LDOin voltage
+# Line output CM = 1.65V
+# Line output supply = LDOin voltage
+# w 30 0A 3B
+#
+# Select ADC PTM_R4
+#w 30 3d 00
+#
+# Select DAC PTM_P3/4
+# w 30 03 00 00
+# <blue>
+# Set the input power-up time to 3.1ms (for ADC)
+#w 30 47 32
+#
+# Set the REF charging time to 40ms
+#w 30 7b 01
+# </blue>
+###############################################
+
+#00,00,select page 0
+#01,01,reset
+
+00,01,Select Page 1
+#02,09,Power up AVDD LDO !!!
+01,08,Disable weak AVDD in presence of external AVDD supply
+02,01,Enable Master Analog Power Control  Power up AVDD LDO
+0a,3b,Set full chip common mode to 0.9V, e.t.c {00111011}
+3d,00,Select ADC PTM_R4
+03,00,Select DAC PTM_P3/4
+04,00,Select DAC PTM_P3/4
+47,32,Set the input power-up time to 3.1ms (for ADC)
+7b,01,Set the REF charging time to 40ms
+
+
+
+
+
+
+###############################################
+# Clock and Interface Settings
+# ---------------------------------------------
+# The codec receives: MCLK = 11.2896 MHz
+# and generates: BLCK = 2.8224 MHz,
+# WCLK = 44.1 kHz
+###############################################
+#
+# Select Page 0
+# w 30 00 00
+#
+# NDAC = 1, MDAC = 2, dividers powered on w 30 0b 81 82
+#
+# NADC = 1, MADC = 2, dividers powered off
+# w 30 12 01 02
+#
+# BCLK frequency is generated from DAC_CLK
+# and N = 4
+# w 30 1D 00 84
+#
+# Set BCLK and WCLK as outputs
+# w 30 1B 0C
+#
+###############################################
+
+00,00,Select Page 0
+0b,81,NDAC = 1, MDAC = 2, dividers powered on w 30 0b 81 82
+0c,82,NDAC = 1, MDAC = 2, dividers powered on w 30 0b 81 82
+
+12,01,NADC = 1, MADC = 2, dividers powered off
+13,02,NADC = 1, MADC = 2, dividers powered off
+
+1d,00,BCLK frequency is generated from DAC_CLK
+1e,84,BCLK frequency is generated from DAC_CLK
+
+1b,0c,Set BCLK and WCLK as outputs 16bit
+#1b,2c,Set BCLK and WCLK as outputs 24bit
+
+
+###############################################
+# Configure Processing Blocks
+###############################################
+#
+# Select Page 0
+#w 30 00 00
+#
+# PRB_P2 and PRB_R2 selected
+#w 30 3C 02 02
+#
+###############################################
+
+3c,02,PRB_P2 and PRB_R2 selected
+3d,02,PRB_P2 and PRB_R2 selected
+
+##################################################
+# Configure ADC Channel
+###############################################
+#
+# Select Page 1
+#w 30 00 01
+#
+# Route IN1L to LEFT_P with 20K input impedance
+#w 30 34 80
+#
+# Route CM1L to LEFT_M with 20K input impedance
+#w 30 36 80
+#
+# Route IN1R to RIGHT_P with 20K input impedance
+#w 30 37 80
+#
+# Route CM1R to RIGHT_M with 20K input impedance
+#w 30 39 80
+#
+# Unmute Left MICPGA, Gain selection of 6dB to
+# make channel gain 0dB, since 20K input
+# impedance is used single ended
+#w 30 3b 0c
+#
+# Unmute Right MICPGA, Gain selection of 6dB to
+# make channel gain 0dB, since 20K input
+# impedance is used single ended
+#w 30 3c 0c
+#
+# Select Page 0
+#w 30 00 00
+#
+# Power up LADC/RADC
+#w 30 51 c0
+#
+# Unmute LADC/RADC
+#w 30 52 00
+#
+###############################################
+
+00,01,Select Page 1
+34,80,Route IN1L to LEFT_P with 20K input impedance
+36,80,Route CM1L to LEFT_M with 20K input impedance
+37,80,Route IN1R to RIGHT_P with 20K input impedance
+39,80,Route CM1R to RIGHT_M with 20K input impedance
+3b,0c,Unmute Left MICPGA, Gain selection of 6dB to,.....
+3c,0c,Unmute Right MICPGA, Gain selection of 6dB to......
+00,00,Select Page 0
+51,c0,Power up LADC/RADC
+52,00,Unmute LADC/RADC
+
+
+
+##################################################
+# Configure DAC Channel
+###############################################
+#
+# Select Page 1
+#w 30 00 01
+#
+# De-pop: 5 time constants, 6k resistance
+#w 30 14 25
+#
+# Route LDAC/RDAC to HPL/HPR
+#w 30 0c 08 08
+#
+# Route LDAC/RDAC to LOL/LOR
+#w 30 0e 08 08
+#
+# Power up HPL/HPR and LOL/LOR drivers
+#w 30 09 3C
+#
+# Unmute HPL/HPR driver, 0dB Gain
+#w 30 10 00 00
+#
+# Unmute LOL/LOR driver, 0dB Gain
+#w 30 12 00 00
+#
+# Select Page 0
+#w 30 00 00
+#
+# DAC => 0dB
+#w 30 41 00 00
+#
+# Power up LDAC/RDAC
+#w 30 3f d6
+#
+# Unmute LDAC/RDAC
+#w 30 40 00
+#
+#
+#
+#
+00,01,Select Page 1
+14,25,De-pop: 5 time constants, 6k resistance
+0c,08,Route LDAC/RDAC to HPL/HPR
+0d,08,Route LDAC/RDAC to HPL/HPR
+0e,08,Route LDAC/RDAC to LOL/LOR
+0f,08,Route LDAC/RDAC to LOL/LOR
+09,3C,Power up HPL/HPR and LOL/LOR drivers
+10,00,Unmute HPL/HPR driver, 0dB Gain
+11,00,Unmute HPL/HPR driver, 0dB Gain
+12,00,Unmute LOL/LOR driver, 0dB Gain
+13,00,Unmute LOL/LOR driver, 0dB Gain
+
+#33,48,enable micbias
+
+00,00,Select Page 0
+41,00,DAC => 0dB
+42,00,DAC => 0dB
+3f,d6,Power up LDAC/RDAC
+40,00,Unmute LDAC/RDAC
