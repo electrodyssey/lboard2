@@ -1,11 +1,11 @@
-*** 2.8.000
 
+*** 2.10.001
+2019-12-06 codec bit and word clocks are now connected to a dedicated clock pins.
+
+*** 2.8.000
 Fixed 3v3 output supply voltage of CDCE913
 
-
-
 *** 2.8.001
-
 Resistor R7 connected to a net SPIFL_NSS (U3 - M25P16) is marked as DNP, because pull-up isn't requred.
 LGPL 3.0 license added to a distribution
 

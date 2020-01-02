@@ -51,8 +51,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 5
 Title "FPGA GPIO"
-Date "2018-09-30"
-Rev "2.9.006"
+Date "2019-12-06"
+Rev "2.10.001"
 Comp "(c) elecrodyssey / LGPL"
 Comment1 "lboard2 - simplistic audio processing board"
 Comment2 ""
@@ -1844,8 +1844,6 @@ F 3 "" H 2025 2025 50  0001 C CNN
 	1    2025 2025
 	1    0    0    -1  
 $EndComp
-Entry Wire Line
-	1675 3275 1775 3375
 $Comp
 L +3V3 #PWR077
 U 1 1 5B6882F3
@@ -1858,17 +1856,11 @@ F 3 "" H 1975 2825 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Entry Wire Line
-	1675 3375 1775 3475
-Entry Wire Line
 	1675 4075 1775 4175
-Text Label 2175 2875 0    60   ~ 0
+Text Label 2600 3375 0    60   ~ 0
 CODEC_WCLK
 Text Label 2525 3275 0    60   ~ 0
 CLK_FPGA_AUX
-Text Label 1825 3375 0    60   ~ 0
-X2_L31P
-Text Label 1825 3475 0    60   ~ 0
-X2_L31N
 Text Label 1825 3775 0    60   ~ 0
 X2_L49P
 Text Label 1825 3875 0    60   ~ 0
@@ -1892,10 +1884,6 @@ F 3 "" H 3575 6025 50  0001 C CNN
 $EndComp
 Text Label 2775 6225 0    60   ~ 0
 X2_L48P
-Text Label 2775 6425 0    60   ~ 0
-X2_L31P
-Text Label 2775 6325 0    60   ~ 0
-X2_L31N
 Text Label 2775 6125 0    60   ~ 0
 X2_L49P
 Text Label 2775 6025 0    60   ~ 0
@@ -1916,7 +1904,7 @@ Text Label 1825 2275 0    60   ~ 0
 CODEC_SCL
 Text Label 1850 2575 0    60   ~ 0
 CODEC_SDA
-Text Label 2675 2675 0    60   ~ 0
+Text Label 2725 3475 0    60   ~ 0
 CODEC_BCLK
 Text Label 2175 2975 0    60   ~ 0
 CODEC_DIN
@@ -1936,11 +1924,7 @@ $EndComp
 Text Label 2325 5200 0    60   ~ 0
 CODEC_CLKAUX
 Entry Wire Line
-	2600 6525 2700 6425
-Entry Wire Line
 	2600 6325 2700 6225
-Entry Wire Line
-	2600 6425 2700 6325
 Text Label 2425 5650 0    60   ~ 0
 X2
 Text Label 1425 6575 0    60   ~ 0
@@ -2219,9 +2203,9 @@ Text HLabel 1775 2275 0    60   Output ~ 0
 CODEC_SCL
 Text HLabel 1775 2575 0    60   BiDi ~ 0
 CODEC_SDA
-Text HLabel 1775 2675 0    60   Output ~ 0
+Text HLabel 2525 3475 0    60   Input ~ 0
 CODEC_BCLK
-Text HLabel 1775 2875 0    60   Output ~ 0
+Text HLabel 2525 3375 0    60   Input ~ 0
 CODEC_WCLK
 Text HLabel 1775 2975 0    60   Output ~ 0
 CODEC_DIN
@@ -2738,8 +2722,6 @@ Wire Wire Line
 	4500 7300 5800 7300
 Wire Bus Line
 	3575 8400 3575 9350
-Wire Wire Line
-	2700 6425 3375 6425
 Wire Bus Line
 	2600 5650 2600 6600
 Wire Bus Line
@@ -3345,8 +3327,6 @@ Wire Wire Line
 Wire Wire Line
 	1775 3575 3250 3575
 Wire Wire Line
-	1775 2675 3250 2675
-Wire Wire Line
 	1775 2575 3250 2575
 Wire Wire Line
 	4100 8600 3675 8600
@@ -3355,8 +3335,6 @@ Wire Wire Line
 Wire Wire Line
 	2025 2075 2025 2025
 Wire Wire Line
-	3250 2875 1775 2875
-Wire Wire Line
 	3250 2975 1775 2975
 Wire Wire Line
 	1775 3075 3250 3075
@@ -3364,10 +3342,6 @@ Wire Wire Line
 	1975 2825 2100 2825
 Wire Wire Line
 	2100 2825 2100 2775
-Wire Wire Line
-	3250 3375 1775 3375
-Wire Wire Line
-	1775 3475 3250 3475
 Wire Wire Line
 	3250 4175 1775 4175
 Wire Wire Line
@@ -3384,8 +3358,6 @@ Wire Wire Line
 	3250 4475 3175 4475
 Wire Wire Line
 	2700 6225 3375 6225
-Wire Wire Line
-	2700 6325 3375 6325
 Wire Bus Line
 	1675 4200 1425 4200
 Wire Bus Line
@@ -3720,4 +3692,12 @@ F 3 "" H 2775 2375 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	1425 2375 2625 2375
+Wire Wire Line
+	3250 3475 2525 3475
+Wire Wire Line
+	3250 3375 2525 3375
+NoConn ~ 3250 2675
+NoConn ~ 3250 2875
+NoConn ~ 3375 6325
+NoConn ~ 3375 6425
 $EndSCHEMATC
